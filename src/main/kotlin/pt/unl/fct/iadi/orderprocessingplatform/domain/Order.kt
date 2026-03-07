@@ -7,4 +7,10 @@ data class Order(
     val items: List<OrderItem>,
     val userId: String,
     val createdAt: Instant = Instant.now()
-)
+) {
+    class OrderItem(
+        val productId: String,
+        val quantity: Int,
+        val price: Double
+    )
+}
